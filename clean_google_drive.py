@@ -41,6 +41,7 @@ def clean_drive(folder_id, files_to_keep, test_mode=False, query=None, clean=Non
     print("Keeping %d files" % files_to_keep)
 
     files = query(folder_id)
+    print("Found %d files" % len(files))
 
     # strip last X files
     if files_to_keep > 0:   # special case: 0 files_to_keep means delete all
