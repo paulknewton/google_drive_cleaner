@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/paulknewton/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google-drive-cleaner)
+[![codecov](https://codecov.io/gh/paulknewton/google-drive-cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google-drive-cleaner)
 
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google-drive-cleaner/?ref=repository-badge)
 
