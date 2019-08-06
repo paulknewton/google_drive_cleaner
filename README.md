@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/paulknewton/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google-drive-cleaner)
+
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google-drive-cleaner/?ref=repository-badge)
+
 # Google Drive Cleaner
 
 Simple script to query a Google Drive folder, and remove any more than X files. Useful to avoid excessive use of storage space.
