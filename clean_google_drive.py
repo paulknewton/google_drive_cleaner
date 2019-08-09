@@ -10,9 +10,13 @@ SCOPES = 'https://www.googleapis.com/auth/drive'
 
 
 def google_logon():
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
+    """
+    Logon to the Google API.
+    The file token.json stores the user's access and refresh tokens, and is
+    created automatically when the authorization flow completes for the first time.
+
+    :return a reference to the Google API
+    """
     store = file.Storage('../cleaner_credentials.json')
     creds = store.get()
     if not creds or creds.invalid:
