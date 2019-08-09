@@ -1,9 +1,8 @@
-import argparse
+from functools import partial
+from apiclient import errors
 from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
-from apiclient import errors
-from functools import partial
 
 # If modifying these scopes, delete the file token.json.
 # SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly'
@@ -22,14 +21,26 @@ def google_logon():
     return build('drive', 'v3', http=creds.authorize(Http()))
 
 
-def google_delete(service, file):
-    service.files().delete(fileId=file['id']).execute()
+def google_delete(service, file_to_delete):
+    """
+    Delete a file from the Google Drive
+
+    :param service: Google Drive API service instance
+    :param file_to_delete: file resource to delete
+    """
+    service.files().delete(fileId=file_to_delete['id']).execute()
     # batch.add(service.files().delete(fileId=f['id']).execute())
 
 
 def clean_drive(folder_id, files_to_keep, test_mode=False, query=None, clean=None):
-    """Shows basic usage of the Drive v3 API.
-    Prints the names and ids of the first 10 files the user has access to.
+    """
+    Keeps the specified number of files on the Google Drive and remove all others.
+
+    :param folder_id: Google Drive reference to the folder to be cleaned
+    :param files_to_keep: number of files to keep on the drive
+    :param test_mode: toggle test mode on/off (i.e. do not actually remove files)
+    :param query: function to call to query files
+    :param clean: function to call to remove a file
     """
     if test_mode:
         print("--- TEST MODE ---")
@@ -44,7 +55,7 @@ def clean_drive(folder_id, files_to_keep, test_mode=False, query=None, clean=Non
     print("Found %d files" % len(files))
 
     # strip last X files
-    if files_to_keep > 0:   # special case: 0 files_to_keep means delete all
+    if files_to_keep > 0:  # special case: 0 files_to_keep means delete all
         del files[-files_to_keep:]
     if not files:
         print('No files found to remove')
@@ -64,19 +75,19 @@ def clean_drive(folder_id, files_to_keep, test_mode=False, query=None, clean=Non
 
 
 def google_query(service, folder_id):
-    """Retrieve a list of File resources.
+    """
+    Retrieve a list of File resources.
 
-    Args:
-      service: Drive API service instance.
-    Returns:
-      List of File resources.
+    :param service: Google Drive API service instance
+    :param folder_id: Google Drive reference to the folder to be queried (cleaned)
+    :return a list of File resources
     """
     params = {
         # "spaces": "drive",
         # "pageSize": 10,
         # id of folder to scan e.g. {'q': "trashed=false and parents in '1PCOXZPwaVlMh93lIm27RNLVxwBRqOvZX'"}
         "q": "trashed=false and parents in '" + folder_id + "'",
-        "orderBy": "modifiedTime"   # latest files at the end
+        "orderBy": "modifiedTime"  # latest files at the end
     }
     result = []
     page_token = None
@@ -108,6 +119,6 @@ if __name__ == '__main__':
     parser.add_argument("files_to_keep", help="number of files to keep", type=int)
     args = parser.parse_args()
 
-    service = google_logon()
-    clean_drive(args.folder_id, args.files_to_keep, test_mode=args.test_mode, query=partial(google_query, service),
-                clean=partial(google_delete, service))
+    api = google_logon()
+    clean_drive(args.folder_id, args.files_to_keep, test_mode=args.test_mode, query=partial(google_query, api),
+                clean=partial(google_delete, api))
