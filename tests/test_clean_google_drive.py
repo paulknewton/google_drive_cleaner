@@ -19,6 +19,22 @@ def test_clean_simple():
     assert sorted(deleted_files) == sorted(all_files[:-keep])
 
 
+def test_clean_test_mode():
+    """
+    Test remove in test mode (leave files untouched
+    """
+    keep = 7
+    files = list(range(0, 10))
+
+    deleted_files = []
+    dummy_query = (lambda x: files)     # returns the list of 'files'
+    dummy_clean = deleted_files.append  # keeps a track of which files are 'deleted'
+
+    clean_google_drive.clean_drive("dummy_folder", keep, test_mode=True, query=dummy_query, clean=dummy_clean)
+
+    assert not deleted_files
+
+
 def test_zero_keep():
     """
     Test cleaning with 0 files (delete everything)
