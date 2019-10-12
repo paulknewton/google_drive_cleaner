@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/paulknewton/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google-drive-cleaner)
-[![codecov](https://codecov.io/gh/paulknewton/google-drive-cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google-drive-cleaner)
+[![Build Status](https://travis-ci.org/paulknewton/google_drive_cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google_drive_cleaner)
+[![codecov](https://codecov.io/gh/paulknewton/google_drive_cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google_drive_cleaner)
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google-drive-cleaner/?ref=repository-badge)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google_drive_cleaner/?ref=repository-badge)
 
 # Google Drive Cleaner
 
