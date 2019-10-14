@@ -12,7 +12,7 @@ pluggy==0.13.0
 py==1.8.0
 pyasn1==0.4.7
 pyasn1-modules==0.2.7
-pyparsing==2.4.0
+pyparsing==2.4.2
 pytest==5.0.0
 rsa==4.0
 six==1.12.0
