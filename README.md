@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/paulknewton/google_drive_cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google_drive_cleaner)
 [![codecov](https://codecov.io/gh/paulknewton/google_drive_cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google_drive_cleaner)
+[![pyup](https://pyup.io/repos/github/paulknewton/google_drive_cleaner/shield.svg)](https://pyup.io/account/repos/github/paulknewton/google_drive_cleaner)
+[![python3](https://pyup.io/repos/github/paulknewton/google_drive_cleaner/python-3-shield.svg)](https://pyup.io/account/repos/github/paulknewton/google_drive_cleaner)
 
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google_drive_cleaner/?ref=repository-badge)
 
@@ -42,6 +44,11 @@ pip install -r requirements.txt
 or install the libraries manually:
 ```
 pip install --upgrade google-api-python-client oauth2client
+```
+
+The unit tests are written in ```pytest``` so install this as well:
+```
+pip install -r requirements_dev.txt
 ```
 
 ### Setup OAuth2
