@@ -3,7 +3,7 @@ cachetools==3.1.1
 google-api-python-client==1.7.11
 google-auth==1.6.3
 google-auth-httplib2==0.0.3
-httplib2==0.12.1
+httplib2==0.14.0
 importlib-metadata==0.18
 more-itertools==7.1.0
 oauth2client==4.1.3
