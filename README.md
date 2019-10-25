@@ -7,7 +7,7 @@
 
 # Google Drive Cleaner
 
-Simple script to query a Google Drive folder, and remove any more than X files. Useful to avoid excessive use of storage space.
+Simple script to query a Google Drive folder, and remove any more than X files. Useful to avoid excessive use of cloud storage space.
 
 ## What is it?
 Google Drive is a low-cost cloud storage that can be accessed from many different devices. This can be accessed via a web interface or using one of the many sync clients.
