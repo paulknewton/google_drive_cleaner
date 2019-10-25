@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/paulknewton/google_drive_cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google_drive_cleaner)
-[![codecov](https://codecov.io/gh/paulknewton/google_drive_cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google_drive_cleaner)
-[![pyup](https://pyup.io/repos/github/paulknewton/google_drive_cleaner/shield.svg)](https://pyup.io/account/repos/github/paulknewton/google_drive_cleaner)
-[![python3](https://pyup.io/repos/github/paulknewton/google_drive_cleaner/python-3-shield.svg)](https://pyup.io/account/repos/github/paulknewton/google_drive_cleaner)
+[![Build Status](https://travis-ci.org/paulknewton/google-drive-cleaner.svg?branch=master)](https://travis-ci.org/paulknewton/google-drive-cleaner)
+[![codecov](https://codecov.io/gh/paulknewton/google-drive-cleaner/branch/master/graph/badge.svg)](https://codecov.io/gh/paulknewton/google-drive-cleaner)
+[![pyup](https://pyup.io/repos/github/paulknewton/google-drive-cleaner/shield.svg)](https://pyup.io/account/repos/github/paulknewton/google-drive-cleaner)
+[![python3](https://pyup.io/repos/github/paulknewton/google-drive-cleaner/python-3-shield.svg)](https://pyup.io/account/repos/github/paulknewton/google-drive-cleaner)
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google_drive_cleaner/?ref=repository-badge)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/paulknewton/google-drive-cleaner/?ref=repository-badge)
 
 # Google Drive Cleaner
 
